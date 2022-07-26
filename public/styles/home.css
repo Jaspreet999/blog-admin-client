@@ -1,0 +1,45 @@
+.card{
+   width: 50%;
+   height: 290px;
+   background-color:white;
+   margin-left: 25%;
+   margin-right: 25%;
+   margin-top: 1%;
+   padding: 1%;
+   border: 5px solid white;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px 0 lightgray;
+   margin-bottom: 5%;
+}
+
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+.card-description{
+    height: 115px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    overflow: hidden;
+    margin-top: 2%;
+    text-overflow: "----";
+
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 black;
+}
+
+.card-body{
+    display: inline;
+    padding: auto;
+}
+
+.heading{
+    height:60px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-overflow: ellipsis;
+}
+.card-date{
+  text-align: right;
+}

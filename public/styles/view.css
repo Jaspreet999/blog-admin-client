@@ -1,0 +1,16 @@
+.blog-container{
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 15%;
+}
+
+.blog-container > p{
+    font-size: 'small';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.blog-container > h2{
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

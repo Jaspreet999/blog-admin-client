@@ -1,0 +1,38 @@
+extends layout.pug
+block contents 
+
+    if blog
+        div(class ="blog-container")
+            h2 #{blog.title}
+            p #{blog.message}
+            h3 comment ..
+
+    if comments
+        each comment in comments
+            div(class ="card")
+                div(class ="card-body")
+                    div(class="heading")
+                        div(class = "card-title")
+                            h3 #{comment.username}  
+                        div(class = "card-date")
+                            - const moment = require('moment')
+                            h5(class = "card-date")= moment(comment.Date).format('YYYY-MM-DD')     
+
+                    p(class = "card-description") #{comment.message}
+
+    div(class="form")
+
+        if errors
+            each error in errors 
+                b #{error.msg}  
+                br
+
+        form( method="POST" , action="")
+               
+                div(class="form-label")
+                    label(for="comment") comment
+
+                div(class="form-field")    
+                    input(type="text",placeholder="very nice", name="message")
+
+                button(type="submit") post                            

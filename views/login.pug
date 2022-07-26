@@ -1,0 +1,31 @@
+extends layout.pug 
+block contents 
+
+
+    div(class="form")
+        
+        if errors
+            each error in errors 
+                b #{error.msg}  
+                br
+        if error
+            b= error
+            br        
+                
+        a(href='/sign_up') sign up
+
+        form( method="POST" , action="")
+            div(class="form-label")
+                label(for="username") Username
+
+            div(class="form-field")    
+                input(type="text", placeholder="singh04" name="username")
+
+            div(class="form-label")
+                label(for="password") Password
+
+            div(class="form-field")    
+                input(type="password", placeholder="singH@546" name="password")
+
+            
+            button(type="submit") login          

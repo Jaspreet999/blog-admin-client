@@ -1,0 +1,38 @@
+extends layout.pug 
+block contents 
+
+    div(class="form")
+
+        if(errMess)
+            b #{errMess} 
+            br
+
+        if error
+            b #{error}
+            br    
+
+        if errors
+            each error in errors 
+                b #{error.msg}  
+                br  
+
+        form( method="POST" , action="")
+            div(class="form-label")
+                label(for="username") Username
+
+            div(class="form-field")    
+                input(type="text",placeholder="singh04", name="username")
+
+            div(class="form-label")
+                label(for="password") Password
+
+            div(class="form-field")    
+                input(type="password",placeholder="password", name="password")
+
+            div(class="form-label")
+                label(for="confirmPassword") confirmPassword
+
+            div(class="form-field")    
+                input(type="password",placeholder="confirm password" name="confirmPassword")
+
+            button(type="submit") sign up            
